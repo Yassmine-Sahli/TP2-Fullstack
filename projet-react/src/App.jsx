@@ -45,6 +45,9 @@ export default App
 
 import React, { useState } from 'react';
 import './App.css';
+import Compteur from './Compteur';
+import Bienvenue from './Bienvenue';
+
 
 function TodoApp() {
   const [todos, setTodos] = useState([]);
@@ -68,6 +71,7 @@ function TodoApp() {
 
   return (
     <div className="todo-app">
+      <Bienvenue nom="Yassmine" />
       <h1>Todo List</h1>
       <input type="text" value={task} onChange={(e) => setTask(e.target.value)}
         placeholder="Ajouter une tâche" />
@@ -80,6 +84,7 @@ function TodoApp() {
           </li>
         ))}
       </ul>
+        <Compteur/>
     </div>
   );
 }
